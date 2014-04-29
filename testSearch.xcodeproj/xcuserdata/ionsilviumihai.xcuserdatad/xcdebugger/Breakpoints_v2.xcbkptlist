@@ -19,12 +19,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "testSearch/searchTableViewController.m"
-            timestampString = "420470277.695012"
+            filePath = "testSearch/SearchTableViewController.m"
+            timestampString = "420475010.258977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-cancelRequest:"
             landmarkType = "5">
          </BreakpointContent>

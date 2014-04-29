@@ -20,11 +20,11 @@
 		4152A58A190E708300298711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4152A56C190E708300298711 /* UIKit.framework */; };
 		4152A592190E708300298711 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4152A590190E708300298711 /* InfoPlist.strings */; };
 		4152A594190E708300298711 /* testSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A593190E708300298711 /* testSearchTests.m */; };
-		4152A59F190E716100298711 /* searchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A59E190E716100298711 /* searchTableViewController.m */; };
+		4152A59F190E716100298711 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A59E190E716100298711 /* SearchTableViewController.m */; };
 		4152A5A2190E74F200298711 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A5A1190E74F200298711 /* AppModel.m */; };
 		4152A5A5190E926100298711 /* customSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A5A4190E926100298711 /* customSearchTableViewCell.m */; };
 		4158B89A190FA79200C01C28 /* detailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B899190FA79200C01C28 /* detailsViewController.m */; };
-		4158B89D190FC59B00C01C28 /* staticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B89C190FC59B00C01C28 /* staticTableViewController.m */; };
+		4158B89D190FC59B00C01C28 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B89C190FC59B00C01C28 /* StaticTableViewController.m */; };
 		4158B8A0190FD38500C01C28 /* placeholderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -56,16 +56,16 @@
 		4152A58F190E708300298711 /* testSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testSearchTests-Info.plist"; sourceTree = "<group>"; };
 		4152A591190E708300298711 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4152A593190E708300298711 /* testSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testSearchTests.m; sourceTree = "<group>"; };
-		4152A59D190E716100298711 /* searchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchTableViewController.h; sourceTree = "<group>"; };
-		4152A59E190E716100298711 /* searchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchTableViewController.m; sourceTree = "<group>"; };
+		4152A59D190E716100298711 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		4152A59E190E716100298711 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		4152A5A0190E74F200298711 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		4152A5A1190E74F200298711 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		4152A5A3190E926100298711 /* customSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSearchTableViewCell.h; sourceTree = "<group>"; };
 		4152A5A4190E926100298711 /* customSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSearchTableViewCell.m; sourceTree = "<group>"; };
 		4158B898190FA79200C01C28 /* detailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailsViewController.h; sourceTree = "<group>"; };
 		4158B899190FA79200C01C28 /* detailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailsViewController.m; sourceTree = "<group>"; };
-		4158B89B190FC59B00C01C28 /* staticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = staticTableViewController.h; sourceTree = "<group>"; };
-		4158B89C190FC59B00C01C28 /* staticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = staticTableViewController.m; sourceTree = "<group>"; };
+		4158B89B190FC59B00C01C28 /* StaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTableViewController.h; sourceTree = "<group>"; };
+		4158B89C190FC59B00C01C28 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
 		4158B89E190FD38500C01C28 /* placeholderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = placeholderTableViewCell.h; sourceTree = "<group>"; };
 		4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = placeholderTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,16 +132,16 @@
 				4152A57A190E708300298711 /* Main.storyboard */,
 				4152A580190E708300298711 /* Images.xcassets */,
 				4152A56F190E708300298711 /* Supporting Files */,
-				4152A59D190E716100298711 /* searchTableViewController.h */,
-				4152A59E190E716100298711 /* searchTableViewController.m */,
+				4152A59D190E716100298711 /* SearchTableViewController.h */,
+				4152A59E190E716100298711 /* SearchTableViewController.m */,
 				4152A5A0190E74F200298711 /* AppModel.h */,
 				4152A5A1190E74F200298711 /* AppModel.m */,
 				4152A5A3190E926100298711 /* customSearchTableViewCell.h */,
 				4152A5A4190E926100298711 /* customSearchTableViewCell.m */,
 				4158B898190FA79200C01C28 /* detailsViewController.h */,
 				4158B899190FA79200C01C28 /* detailsViewController.m */,
-				4158B89B190FC59B00C01C28 /* staticTableViewController.h */,
-				4158B89C190FC59B00C01C28 /* staticTableViewController.m */,
+				4158B89B190FC59B00C01C28 /* StaticTableViewController.h */,
+				4158B89C190FC59B00C01C28 /* StaticTableViewController.m */,
 				4158B89E190FD38500C01C28 /* placeholderTableViewCell.h */,
 				4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */,
 			);
@@ -279,9 +279,9 @@
 				4152A579190E708300298711 /* AppDelegate.m in Sources */,
 				4158B8A0190FD38500C01C28 /* placeholderTableViewCell.m in Sources */,
 				4152A5A2190E74F200298711 /* AppModel.m in Sources */,
-				4158B89D190FC59B00C01C28 /* staticTableViewController.m in Sources */,
+				4158B89D190FC59B00C01C28 /* StaticTableViewController.m in Sources */,
 				4152A575190E708300298711 /* main.m in Sources */,
-				4152A59F190E716100298711 /* searchTableViewController.m in Sources */,
+				4152A59F190E716100298711 /* SearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testSearch/testSearch-Prefix.pch";
 				INFOPLIST_FILE = "testSearch/testSearch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -422,6 +423,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testSearch/testSearch-Prefix.pch";
 				INFOPLIST_FILE = "testSearch/testSearch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

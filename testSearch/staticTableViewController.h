@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface staticTableViewController : UITableViewController
+@interface StaticTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *collectionImage;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 sparktech. All rights reserved.
 //
 
-#import "staticTableViewController.h"
+#import "StaticTableViewController.h"
 
-@interface staticTableViewController ()
+@interface StaticTableViewController ()
 
 @end
 
-@implementation staticTableViewController
+@implementation StaticTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.theTable.scrollEnabled = NO;
     self.idLabel.text = [NSString stringWithFormat:@"%@",[self.viewData objectForKey:@"id"]];
     self.titleLabel.text = [self.viewData objectForKey:@"title"];
     self.userIDLabel.text = [NSString stringWithFormat:@"%@",[self.viewData objectForKey:@"user_id"]];

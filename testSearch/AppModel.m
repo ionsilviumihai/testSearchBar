@@ -10,10 +10,10 @@
 
 @implementation AppModel
 
-+(AppModel *)sharedModel
++ (AppModel *)sharedModel
 {
     static AppModel *sharedModel;
-    if(sharedModel == nil)
+    if (sharedModel == nil)
     {
         sharedModel = [[AppModel alloc] init];
     }
@@ -51,7 +51,7 @@
         
         dispatch_async(requestQueue, ^{
             
-            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://ipi.sparktechsoft.net/api/v1/items/search?q=%@&extra=1&type=all&auth_token=5aX2KzMc2JJwj4FGzAQh", parameter]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10];
+            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://ipi.sparktechsoft.net/api/v1/items/search?q=%@&extra=1&type=all&auth_token=5aX2KzMc2JJwj4FGzAQh", parameter]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
             
             [request setHTTPMethod:@"GET"];
             
@@ -138,6 +138,7 @@
         //[self.images addObject:data];
 
         dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"MAIN QUEUE");
             [self.images setObject:data forKey:self.collections[index][@"id"]];
             NSDictionary *dataDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:index]
                                                                  forKey:@"valoarePasata"];

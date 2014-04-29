@@ -6,29 +6,21 @@
 //  Copyright (c) 2014 sparktech. All rights reserved.
 //
 
-#import "searchTableViewController.h"
+#import "SearchTableViewController.h"
 #import "AppModel.h"
 #import "customSearchTableViewCell.h"
 #import "detailsViewController.h"
-#import "staticTableViewController.h"
+#import "StaticTableViewController.h"
 #import "placeholderTableViewCell.h"
 
-@interface searchTableViewController ()
-@property BOOL readyForNewSearch;
-@property BOOL displaySearchingCell;
+@interface SearchTableViewController ()
+
+@property (nonatomic) BOOL readyForNewSearch;
+@property (nonatomic) BOOL displaySearchingCell;
 
 @end
 
-@implementation searchTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation SearchTableViewController
 
 - (void)viewDidLoad
 {
@@ -38,8 +30,14 @@
     self.displaySearchingCell = NO;
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchHasReturnedAResult:) name:[AppModel searchResultReturned] object:AppModel.sharedModel];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelHasReturnedPhotos:) name:[AppModel imageDownloadFinished] object:AppModel.sharedModel];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(searchHasReturnedAResult:)
+                                                 name:[AppModel searchResultReturned]
+                                               object:AppModel.sharedModel];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(modelHasReturnedPhotos:)
+                                                 name:[AppModel imageDownloadFinished]
+                                               object:AppModel.sharedModel];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
@@ -70,8 +68,10 @@
 
     // Return the number of rows in the section.
     AppModel *sharedModel = [AppModel sharedModel];
-    if (sharedModel.collections == nil || self.readyForNewSearch) {
-        if (self.displaySearchingCell) {
+    if (sharedModel.collections == nil || self.readyForNewSearch)
+    {
+        if (self.displaySearchingCell)
+        {
             return 1;
         }
         else return 0;
@@ -91,7 +91,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.displaySearchingCell) {
+    if (self.displaySearchingCell)
+    {
         placeholderTableViewCell *cell = (placeholderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"placeholderCell"];
         [cell.activityIndicator startAnimating];
         return cell;
@@ -99,7 +100,6 @@
     else
     {
         customSearchTableViewCell *cell = (customSearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"customCell1"];
-        [cell setBackgroundColor:[UIColor colorWithRed:209 green:238 blue:252 alpha:1]];
         
         AppModel *sharedModel = [AppModel sharedModel];
     
@@ -135,55 +135,34 @@
     }
 }
 
+#pragma mark Table View delegate
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [cell setBackgroundColor:[UIColor colorWithRed:209.0f / 255.0f
+                                             green:238.0f / 255.0f
+                                              blue:252.0f / 255.0f
+                                             alpha:1]];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    return (self.displaySearchingCell) ? 169.0 : 84.0;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Cell tap");
+    /*
+    StaticTableViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StaticTableViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
+     */
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    NSLog(@"Accessory tap");
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - search field delegates
 
@@ -234,7 +213,7 @@
         
         NSLog(@"Row: %d", indexPath.row);
         AppModel *sharedModel = [AppModel sharedModel];
-        staticTableViewController *detailVC = (staticTableViewController *)segue.destinationViewController;
+        StaticTableViewController *detailVC = (StaticTableViewController *)segue.destinationViewController;
         
         //detailVC.viewData = @{@"id": sharedModel.collections[indexPath.row][@"id"]};//,
                               //@"title": sharedModel.collections[indexPath.row][@"title"],

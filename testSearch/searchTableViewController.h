@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface searchTableViewController : UITableViewController <UISearchBarDelegate>
+@interface SearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 - (IBAction)clearTable:(id)sender;
 - (IBAction)cancelRequest:(id)sender;
-
 
 @end
