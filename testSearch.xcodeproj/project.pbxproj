@@ -14,7 +14,6 @@
 		4152A575190E708300298711 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A574190E708300298711 /* main.m */; };
 		4152A579190E708300298711 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4152A578190E708300298711 /* AppDelegate.m */; };
 		4152A57C190E708300298711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4152A57A190E708300298711 /* Main.storyboard */; };
-		4152A581190E708300298711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4152A580190E708300298711 /* Images.xcassets */; };
 		4152A588190E708300298711 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4152A587190E708300298711 /* XCTest.framework */; };
 		4152A589190E708300298711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4152A568190E708300298711 /* Foundation.framework */; };
 		4152A58A190E708300298711 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4152A56C190E708300298711 /* UIKit.framework */; };
@@ -26,6 +25,8 @@
 		4158B89A190FA79200C01C28 /* detailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B899190FA79200C01C28 /* detailsViewController.m */; };
 		4158B89D190FC59B00C01C28 /* StaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B89C190FC59B00C01C28 /* StaticTableViewController.m */; };
 		4158B8A0190FD38500C01C28 /* placeholderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */; };
+		4195611C1910FC0500C5F83F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4195611B1910FC0500C5F83F /* Images.xcassets */; };
+		4195611F1911055100C5F83F /* BidirectionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4195611E1911055100C5F83F /* BidirectionalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 		4152A577190E708300298711 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4152A578190E708300298711 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4152A57B190E708300298711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4152A580190E708300298711 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4152A586190E708300298711 /* testSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4152A587190E708300298711 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4152A58F190E708300298711 /* testSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testSearchTests-Info.plist"; sourceTree = "<group>"; };
@@ -68,6 +68,9 @@
 		4158B89C190FC59B00C01C28 /* StaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticTableViewController.m; sourceTree = "<group>"; };
 		4158B89E190FD38500C01C28 /* placeholderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = placeholderTableViewCell.h; sourceTree = "<group>"; };
 		4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = placeholderTableViewCell.m; sourceTree = "<group>"; };
+		4195611B1910FC0500C5F83F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4195611D1911055100C5F83F /* BidirectionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BidirectionalViewController.h; sourceTree = "<group>"; };
+		4195611E1911055100C5F83F /* BidirectionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BidirectionalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +130,10 @@
 		4152A56E190E708300298711 /* testSearch */ = {
 			isa = PBXGroup;
 			children = (
+				4195611B1910FC0500C5F83F /* Images.xcassets */,
 				4152A577190E708300298711 /* AppDelegate.h */,
 				4152A578190E708300298711 /* AppDelegate.m */,
 				4152A57A190E708300298711 /* Main.storyboard */,
-				4152A580190E708300298711 /* Images.xcassets */,
 				4152A56F190E708300298711 /* Supporting Files */,
 				4152A59D190E716100298711 /* SearchTableViewController.h */,
 				4152A59E190E716100298711 /* SearchTableViewController.m */,
@@ -144,6 +147,8 @@
 				4158B89C190FC59B00C01C28 /* StaticTableViewController.m */,
 				4158B89E190FD38500C01C28 /* placeholderTableViewCell.h */,
 				4158B89F190FD38500C01C28 /* placeholderTableViewCell.m */,
+				4195611D1911055100C5F83F /* BidirectionalViewController.h */,
+				4195611E1911055100C5F83F /* BidirectionalViewController.m */,
 			);
 			path = testSearch;
 			sourceTree = "<group>";
@@ -253,7 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4152A581190E708300298711 /* Images.xcassets in Resources */,
+				4195611C1910FC0500C5F83F /* Images.xcassets in Resources */,
 				4152A573190E708300298711 /* InfoPlist.strings in Resources */,
 				4152A57C190E708300298711 /* Main.storyboard in Resources */,
 			);
@@ -277,6 +282,7 @@
 				4158B89A190FA79200C01C28 /* detailsViewController.m in Sources */,
 				4152A5A5190E926100298711 /* customSearchTableViewCell.m in Sources */,
 				4152A579190E708300298711 /* AppDelegate.m in Sources */,
+				4195611F1911055100C5F83F /* BidirectionalViewController.m in Sources */,
 				4158B8A0190FD38500C01C28 /* placeholderTableViewCell.m in Sources */,
 				4152A5A2190E74F200298711 /* AppModel.m in Sources */,
 				4158B89D190FC59B00C01C28 /* StaticTableViewController.m in Sources */,

@@ -111,6 +111,8 @@
 
 -(void)getPhotosAtIndex:(int)index
 {
+    
+    NSLog(@"A INTRAT IN GET PHOTOS AT INDEX: %d", index);
 /*
     dispatch_queue_t downloadImagesQueue = dispatch_queue_create("Image Download Queue", NULL);
     dispatch_async(downloadImagesQueue, ^{
@@ -139,10 +141,12 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"MAIN QUEUE");
-            [self.images setObject:data forKey:self.collections[index][@"id"]];
-            NSDictionary *dataDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:index]
-                                                                 forKey:@"valoarePasata"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:[AppModel imageDownloadFinished] object:self userInfo:dataDict];
+            if (index < self.collections.count) {
+                [self.images setObject:data forKey:self.collections[index][@"id"]];
+                NSDictionary *dataDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:index]
+                                                                     forKey:@"valoarePasata"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:[AppModel imageDownloadFinished] object:self userInfo:dataDict];
+            }
         });
         
         //[[NSNotificationCenter defaultCenter] postNotificationName:[AppModel imageDownloadFinished] object:self];
